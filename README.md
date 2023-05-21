@@ -34,4 +34,8 @@ O projeto utiliza as seguintes interfaces, protocolos e módulos de comunicaçã
 
 ## Conclusão
 
-Essa documentação forneceu uma visão geral abrangente do projeto de sensor de presença com NodeMCU. Agora você possui as informações necessárias para reproduzir o projeto, desde
+Essa documentação forneceu uma visão geral abrangente do projeto de sensor de presença com NodeMCU. Agora você possui as informações necessárias para reproduzir o projeto, desde  funcionamento básico até os detalhes do hardware e software utilizados.
+
+Caso você queira contribuir ou obter mais informações, visite o repositório do projeto [link para o repositório]. Lá você encontrará o código-fonte, a documentação completa e poderá se envolver com a comunidade de desenvolvedores interessados no projeto.
+
+Aproveite o desenvolvimento do seu próprio sistema de sensor de presença e desfrute dos recursos de comunicação e controle remoto via Internet oferecidos pela integração com o protocolo MQTT.
