@@ -1,0 +1,26 @@
+#define BUZZER D4      // Alarme conectado ao GPIO-02/D4 do ESp8266
+#define PIR D7     // Sensor de presenca conectado ao GPIO-16/D0 do ESp8266
+#define LED D3
+int waitingTime = 2000;  // Tempo de espera em milissegundos
+
+void setup() {
+  pinMode(PIR, INPUT);    // Define o sensor de presenca como entrada
+  pinMode(BUZZER, OUTPUT);    // Define o alarme(buzzer) como saida
+  pinMode(LED, OUTPUT);    // Define o led como saida
+  digitalWrite(BUZZER, LOW);  // Inicializa o alarme como desligado
+  digitalWrite(LED, LOW);  // Inicializa o led como desligado
+}
+void loop() {
+  int state = digitalRead(PIR);  // Checa continuadamente se ha presenca
+  //delay(waitingTime);                  // Define o tempo de espera para checar o o estado
+  if (state == HIGH) {
+    digitalWrite(BUZZER, HIGH);  // Soa o alarme, ...
+    digitalWrite(LED, HIGH);     //..acende o led, ...
+    delay(waitingTime);         //.. por 3 segundos ...
+    digitalWrite(BUZZER, LOW);   //..e entao para o alarme ...
+    digitalWrite(LED, LOW);      //.. e desliga o led.
+  } else {
+    digitalWrite(BUZZER, LOW);  // Caso nao seja detectada presenca mantem o alarme desligado.
+    digitalWrite(LED, LOW);  // Caso nao seja detectada presenca mantem o alarme desligado.
+  }
+}
